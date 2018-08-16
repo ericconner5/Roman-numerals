@@ -1,6 +1,6 @@
-  user input returns an output
+  user input returns an output | "L" | "L"
 
-  user input limited to roman numerals
+user input limited to roman numerals | 
 single symbol entered returns number value
 assign values to each of the roman numerals
 

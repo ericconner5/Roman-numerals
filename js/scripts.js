@@ -1,25 +1,40 @@
-var romanNumerals = ["I", "V", "X", "L", "C", "D", "M"]
-
-
+var romanNumerals = ["I","V","X","L","C","D","M"]
+var gSomeInput;
 $(document).ready(function(){
 
 
   $("form#user-form").submit(function(event) {
     event.preventDefault();
-    var someInput = $("input#some-input").val();
+    gSomeInput = $("input#some-input").val();
+    $("#roman").text(gSomeInput);
 
-  $("#roman").text(someInput);
+    $(".results").show();
+    for (var i = 0; i < romanNumerals.length; i++) {
+      var someInput1 = gSomeInput[0];
+      console.log(someInput1)
+    }
+    if (romanNumerals.includes(someInput1)) {
+      $("#please").hide();
+    }
+      // else (someInput1 === romanNumerals) {
+    else {
+        $("#please").show();
+    }
+    // if (gSomeInput.charAt(0) !== "I", "V", "X", "L", "C", "D", "M") {
+    //   $('#please').show();}
+    // if (gSomeInput.charAt(0) === "I", "V", "X", "L", "C", "D", "M") {
+    //     console.log(gSomeInput);
+    })
 
-  $(".results").show();
-  if (someInput === romanNumerals) {
-    alert("well done")
-  } else {(someInput !== romanNumerals) {
-    alert('Please enter Roman Numerals.')
-
-  }
-
-  });
 });
 
 
-console.log("muffin");
+    console.log("outer " + gSomeInput);
+
+  // if (someInput.charAt(0) === romanNumeral) {
+  //   alert("well done")
+  // } else {(someInput !== romanNumerals) {
+
+
+  // }
+// });
